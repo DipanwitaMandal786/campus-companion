@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cafeteria</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <h2>🎓 Campus Companion</h2>
+    <ul>
+      <li><a href="index.html">Dashboard</a></li>
+      <li><a href="map.html">Map</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="community.html">Community</a></li>
+      <li><a href="team.html">Teams</a></li>
+      <li><a href="cafeteria.html">Cafeteria</a></li>
+      <li><a href="admin.html">Admin</a></li>
+    </ul>
+    <button id="darkToggle">🌙</button>
+  </nav>
+
+  <section>
+    <h3>🍔 Cafeteria Queue</h3>
+
+    <div class="card">
+      <h4>Current Queue</h4>
+      <p id="queueCount">People in queue: 5</p>
+      <button onclick="joinQueue()">Join Queue</button>
+    </div>
+
+    <div class="card">
+      <h4>Fast Track Subscription</h4>
+      <p>Skip the line with subscription</p>
+      <button onclick="subscribe()">Subscribe</button>
+    </div>
+  </section>
+<footer style="text-align:center; padding:20px; color:#94a3b8;">
+  © 2026 Campus Companion • Impetus Hackathon
+</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

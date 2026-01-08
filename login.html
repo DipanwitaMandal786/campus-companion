@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login - Campus Companion</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <h2>🎓 Campus Companion</h2>
+  </nav>
+
+  <section style="text-align:center; max-width:400px; margin:auto;">
+  <h2>Login</h2>
+
+  <input type="email" id="email" placeholder="Email" style="width:100%; padding:10px;"><br><br>
+  <input type="password" id="password" placeholder="Password" style="width:100%; padding:10px;"><br><br>
+
+  <button onclick="emailLogin()" style="padding:10px 20px; font-size:16px;">
+    Login with Email
+  </button>
+
+  <hr style="margin:20px 0;">
+
+  <p>OR</p>
+
+  <button onclick="googleLogin()" style="padding:10px 20px;font-size:16px;">
+    🔐 Sign in with Google
+  </button>
+</section>
+<!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+
+<script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyDphVJ30R_nKLqBCVoAkbcZsSbKk3if--E",
+    authDomain: "campus-companion-c479b.firebaseapp.com",
+    projectId: "campus-companion-c479b",
+    storageBucket: "campus-companion-c479b.firebasestorage.app",
+    messagingSenderId: "460781088780",
+    appId: "1:460781088780:web:89078db5ae43930141fe29"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+
+  function emailLogin() {
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    firebase.auth().signInWithEmailAndPassword(email, password)
+      .then(() => {
+        alert("Login successful");
+        window.location.href = "index.html";
+      })
+      .catch(error => alert(error.message));
+  }
+</script>
+
+
+  <script src="script.js"></script>
+  <footer style="text-align:center; padding:20px; color:#94a3b8;">
+  © 2026 Campus Companion • Impetus Hackathon
+</footer>
+
+</body>
+</html>

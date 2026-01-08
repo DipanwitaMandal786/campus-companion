@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Events</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <h2>🎓 Campus Companion</h2>
+    <ul>
+      <li><a href="index.html">Dashboard</a></li>
+      <li><a href="map.html">Map</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="community.html">Community</a></li>
+    </ul>
+  </nav>
+
+  <section>
+  <h3>🎉 Events & Hackathons</h3>
+
+  <div class="card">
+    <h4>Impetus Hackathon</h4>
+    <p>Date: 15 March</p>
+
+    <form onsubmit="registerEvent(event)">
+      <input type="text" placeholder="Your Name" required><br><br>
+      <input type="email" placeholder="Your Email" required><br><br>
+      <button type="submit">Register</button>
+    </form>
+  </div>
+</section>
+<h2>Events</h2>
+
+<input id="title" placeholder="Event title">
+<input id="desc" placeholder="Description">
+<button onclick="addEvent()">Add Event</button>
+
+<ul id="eventList"></ul>
+
+<script>
+function addEvent(){
+ fetch("http://localhost/campus-backend/events/add.php",{
+  method:"POST",
+  headers:{"Content-Type":"application/x-www-form-urlencoded"},
+  body:`title=${title.value}&description=${desc.value}`
+ }).then(loadEvents);
+}
+
+function loadEvents(){
+ fetch("http://localhost/campus-backend/events/fetch.php")
+ .then(r=>r.json())
+ .then(d=>{
+  eventList.innerHTML="";
+  d.forEach(e=>{
+   eventList.innerHTML += `<li>${e.title}</li>`;
+  });
+ });
+}
+
+loadEvents();
+</script>
+<footer style="text-align:center; padding:20px; color:#94a3b8;">
+  © 2026 Campus Companion • Impetus Hackathon
+</footer>
+
+</body>
+</html>

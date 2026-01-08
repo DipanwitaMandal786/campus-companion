@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Doubt Session</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <h2>🎓 Campus Companion</h2>
+    <ul>
+      <li><a href="index.html">Dashboard</a></li>
+      <li><a href="map.html">Map</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="community.html">Community</a></li>
+      <li><a href="team.html">Teams</a></li>
+      <li><a href="cafeteria.html">Cafeteria</a></li>
+      <li><a href="doubt.html">Doubt Session</a></li>
+      <li><a href="admin.html">Admin</a></li>
+    </ul>
+    <button id="darkToggle">🌙</button>
+  </nav>
+
+  <section>
+    <h3>📘 Book a Doubt Session</h3>
+
+    <div class="card">
+      <form onsubmit="bookDoubt(event)">
+        <input type="text" id="studentName" placeholder="Your Name" required><br><br>
+
+        <select id="teacher">
+          <option>Dr. Sharma (Math)</option>
+          <option>Prof. Sen (Electronics)</option>
+          <option>Dr. Roy (Computer Science)</option>
+        </select><br><br>
+
+        <select id="slot">
+          <option>10:00 AM - 10:30 AM</option>
+          <option>11:00 AM - 11:30 AM</option>
+          <option>2:00 PM - 2:30 PM</option>
+        </select><br><br>
+
+        <button type="submit">Book Session</button>
+      </form>
+    </div>
+  </section>
+  <footer style="text-align:center; padding:20px; color:#94a3b8;">
+  © 2026 Campus Companion • Impetus Hackathon
+</footer>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

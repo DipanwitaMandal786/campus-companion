@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Campus Companion</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="navbar-left">
+    <h2>🎓 Campus Companion</h2>
+  </div>
+
+  <ul class="navbar-links">
+    <li><a href="index.html">Dashboard</a></li>
+    <li><a href="map.html">Map</a></li>
+    <li><a href="events.html">Events</a></li>
+    <li><a href="community.html">Community</a></li>
+    <li><a href="team.html">Teams</a></li>
+    <li><a href="cafeteria.html">Cafeteria</a></li>
+    <li><a href="assistant.html">AI</a></li>
+    <li><a href="admin.html">Admin</a></li>
+  </ul>
+
+  <button id="darkToggle" class="dark-btn">🌙</button>
+  <span id="dipanwita2005@gmail.com" style="margin-right:10px;"></span>
+<button onclick="logout()" class="dark-btn">Logout</button>
+
+</nav>
+
+<!-- DASHBOARD -->
+<section class="dashboard">
+  <h2 class="dashboard-title">Welcome to Campus Companion</h2>
+  <p class="dashboard-subtitle">
+    Your all-in-one smart campus platform
+  </p>
+
+  <div class="dashboard-grid">
+
+    <div class="dashboard-card">
+      <h3>📍 Campus Map</h3>
+      <p>Find classrooms, labs and cafeteria.</p>
+      <a href="map.html">Open →</a>
+    </div>
+
+    <div class="dashboard-card">
+      <h3>🎉 Events</h3>
+      <p>Register for events and hackathons.</p>
+      <a href="events.html">Open →</a>
+    </div>
+
+    <div class="dashboard-card">
+      <h3>💬 Community</h3>
+      <p>Discuss, connect and get mentorship.</p>
+      <a href="community.html">Open →</a>
+    </div>
+
+    <div class="dashboard-card">
+      <h3>🤝 Teams</h3>
+      <p>Find teammates by skills.</p>
+      <a href="team.html">Open →</a>
+    </div>
+
+    <div class="dashboard-card">
+      <h3>🍔 Cafeteria</h3>
+      <p>Queue & fast-track subscriptions.</p>
+      <a href="cafeteria.html">Open →</a>
+    </div>
+
+    <div class="dashboard-card">
+      <h3>🤖 AI Assistant</h3>
+      <p>Get instant campus help.</p>
+      <a href="assistant.html">Open →</a>
+    </div>
+
+  </div>
+</section>
+
+<footer style="text-align:center; padding:15px; color:gray;">
+  © 2026 Campus Companion | Built for Impetus Hackathon
+</footer>
+
+<script src="script.js"></script>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-app.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyDphVJ30R_nKLqBCVoAkbcZsSbKk3if--E",
+    authDomain: "campus-companion-c479b.firebaseapp.com",
+    projectId: "campus-companion-c479b",
+    storageBucket: "campus-companion-c479b.firebasestorage.app",
+    messagingSenderId: "460781088780",
+    appId: "1:460781088780:web:89078db5ae43930141fe29"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+</script>
+<footer style="text-align:center; padding:20px; color:#94a3b8;">
+  © 2026 Campus Companion • Impetus Hackathon
+</footer>
+
+</body>
+
+</html>

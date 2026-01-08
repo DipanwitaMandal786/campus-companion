@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Campus Assistant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <h2>🎓 Campus Companion</h2>
+    <ul>
+      <li><a href="index.html">Dashboard</a></li>
+      <li><a href="map.html">Map</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="community.html">Community</a></li>
+      <li><a href="team.html">Teams</a></li>
+      <li><a href="cafeteria.html">Cafeteria</a></li>
+      <li><a href="doubt.html">Doubt Session</a></li>
+      <li><a href="assistant.html">AI Assistant</a></li>
+      <li><a href="admin.html">Admin</a></li>
+    </ul>
+    <button id="darkToggle">🌙</button>
+  </nav>
+
+  <section>
+    <h3>🤖 AI Campus Assistant</h3>
+
+    <div class="card">
+      <p>Ask me anything about the campus:</p>
+
+      <input type="text" id="aiQuestion" placeholder="Type your question..." />
+      <br><br>
+      <button onclick="askAI()">Ask</button>
+
+      <p id="aiAnswer"></p>
+    </div>
+  </section>
+  <footer style="text-align:center; padding:20px; color:#94a3b8;">
+  © 2026 Campus Companion • Impetus Hackathon
+</footer>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

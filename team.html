@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Team Formation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <h2>🎓 Campus Companion</h2>
+    <ul>
+      <li><a href="index.html">Dashboard</a></li>
+      <li><a href="map.html">Map</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="community.html">Community</a></li>
+      <li><a href="team.html">Teams</a></li>
+    </ul>
+  </nav>
+
+  <section>
+    <h3>🤝 Team Formation</h3>
+
+    <div class="card">
+      <h4>Create Team Requirement</h4>
+
+      <form onsubmit="addTeam(event)">
+        <input type="text" id="teamName" placeholder="Team Name" required><br><br>
+        <input type="text" id="skills" placeholder="Skills Needed (e.g. Frontend, AI)" required><br><br>
+        <button type="submit">Post Requirement</button>
+      </form>
+    </div>
+
+    <div class="card">
+      <h4>Open Team Requests</h4>
+      <ul id="teamList"></ul>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+  <footer style="text-align:center; padding:20px; color:#94a3b8;">
+  © 2026 Campus Companion • Impetus Hackathon
+</footer>
+
+</body>
+</html>
