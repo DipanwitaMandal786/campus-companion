@@ -41,7 +41,7 @@ Campus Companion provides a **single unified platform** for:
 - Firebase Authentication
 
 ## 🌐 Live Demo
-👉 https://your-username.github.io/campus-companion/
+👉 https://dipanwitamandal786.github.io/campus-companion/
 
 ## 🧪 Local Setup (Backend)
 ```bash
